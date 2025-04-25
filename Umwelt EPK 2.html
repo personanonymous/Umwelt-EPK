@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umwelt</title>
+  
+  <!-- Link to Google Fonts to import Azaret Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Azaret+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Azaret Mono', monospace;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.5px; /* Reduces the gap between characters */
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 20px; /* Aligns the header to the left of the page */
+      z-index: 1000;
+      font-size: 0.75em;
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove any padding */
+      text-align: left; /* Ensures text is aligned to the left */
+    }
+
+    .header p {
+      margin: 0; /* Remove default margin from paragraphs */
+      padding: 0; /* Remove padding */
+    }
+
+    /* Blinking animation for the ▮ character */
+    .blinking {
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    #playButton, #skipButton {
+      background: none;
+      border: none;
+      font-family: 'Azaret Mono', monospace;
+      font-size: inherit;
+      cursor: pointer;
+      padding: 0;
+      color: black;
+    }
+
+    #playButton:hover, #skipButton:hover {
+      text-decoration: underline;
+    }
+
+    .scrolling-title-container {
+      overflow: hidden;
+      width: 120px;
+      height: 1em;
+      display: none;
+      position: relative;
+    }
+
+    .scrolling-title {
+      display: inline-block;
+      white-space: nowrap;
+      opacity: 100;
+      animation: scroll-text 10s linear infinite;
+    }
+
+    @keyframes scroll-text {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .centered-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .centered-content img {
+      width: 800px;
+      margin-right: 100px; /* Added spacing between the image and text */
+    }
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 0.7em;
+      line-height: 0.1;
+      margin-left: 10px;
+    }
+
+    .text-row {
+      margin-bottom: 2px; /* Reduced spacing between each line */
+      text-align: left;
+    }
+
+    .bottom-left-info {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 0.7em;
+      line-height: 1.2;
+      text-align: left;
+      z-index: 1000;
+    }
+
+    .bottom-left-info p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .centered-paragraph {
+      position: absolute;
+      top: 20%;
+      left: 20px;
+      transform: translateY(-20%);
+      font-size: 0.7em;
+      line-height: 1.2;
+      width: 300px;
+      z-index: 1000;
+      text-align: left;
+    }
+
+    .centered-paragraph p {
+      margin: 0; /* Remove the default margin between paragraphs */
+      padding: 0; /* Remove any default padding */
+      line-height: 1; /* Optional: Adjust line-height to control spacing between lines */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <p><span class="blinking">▮</span> Umwelt</p>
+    <p>Onas Ueno</p>
+    <p style="display: flex; align-items: center; gap: 10px;">
+      <!-- Buttons and scrolling title if needed -->
+    </p>
+  </div>
+
+  <!-- Centered Justified Paragraph -->
+  <div class="centered-paragraph">
+    <p>▮ Umwelt is the debut solo release of London-based artist Onas Ueno.</p>
+    <br>
+    <p>▮ For all enquiries, please contact: strata.edition@gmail.com</p>
+    <br>
+    <p>▮ Tracklist:</p>
+    <p>1. Too Ghost To Body</p>
+    <p>2. Lo</p>
+    <p>3. Every Dread Delight</p>
+    <p>4. Qualia</p>
+    <p>5. Tools For A Second</p>
+    <p>6. What Angels</p>
+<br>
+<br>
+<br>
+<br>
+  <p>▮ Release date: 29.06.2025</p>
+  </div>
+
+  <!-- Centered Content with Image and Text to the Right -->
+  <div class="centered-content">
+    <!-- Image on the left -->
+    <img src="https://i.postimg.cc/MG3tT81K/Umwelt-Artwork.jpg" alt="Enquiry Image">
+  </div>
+
+  <!-- Bottom Left Info -->
+  <div class="bottom-left-info">
+    <p><span class="blinking">▮</span> Written and Produced: Jonas Pequeno</p>
+    <p>▮ Engineer: Ryan Pumo</p>
+    <p>▮ Cover Design: Amelia Galliford</p>
+  </div>
+
+  <!-- Hidden Audio Player -->
+  <audio id="audioPlayer" preload="auto">
+    <source src="https://dl.dropbox.com/scl/fi/ob5u2bg5gz2pd6ntqklrx/2ghost_ref_3.mp3?rlkey=3qwu41k9qupd877i726yp9eyc&st=j2oft3g9&dl=0" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- JavaScript -->
+  <script>
+    // JavaScript logic remains unchanged
+  </script>
+</body>
+</html>
